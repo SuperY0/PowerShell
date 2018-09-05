@@ -1,0 +1,2 @@
+#Crearlo en un nuevo acceso directo con la ruta de abajo
+powershell.exe -noprofile -nologo -noninteractive -command "(new-object -ComObject shell.application).WindowsSecurity()"
