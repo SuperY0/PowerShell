@@ -1,0 +1,25 @@
+//--------Script.txt--------//
+option batch abort
+option confirm off
+open sftp://user:pass@server
+get -filemask="*>=1D" /Source/ Destination\
+exit
+//-----------//-----------//
+
+
+
+//---------Powershel-------//
+cd D:\SFTP\
+D:\SFTP\winscp.com /script=Script.txt
+cd D:\SFTP\temp\
+$fn = Get-ChildItem | where Extension
+$d = Get-Date -Format yyyyMMdd
+$pos = 'sal_pos_'
+$xrf = 'sal_sec_xrf_'
+Expand-Archive -Path D:\SFTP\temp\$fn -DestinationPath D:\SFTP\temp\ -Force
+Copy-Item -Path D:\SFTP\temp\$fn -Destination \\folder\
+Copy-Item -Path D:\SFTP\temp\sal_pos -Destination \\folder\$pos$d
+Copy-Item -Path D:\SFTP\temp\sal_sec_xrf -Destination \\folder\$xrf$d
+Remove-Item D:\SFTP\temp\* -Recurse -Force
+exit
+//-------------//---------//
