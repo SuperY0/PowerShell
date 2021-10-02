@@ -1,7 +1,7 @@
 param([string]$vmName)
 #
 # Enable-NestedVm.ps1
-#
+#Set-ExecutionPolicy Unrestricted
 # Checks VM for nesting comatability and configures if not properly setup.
 #
 # Author: Drew Cross
