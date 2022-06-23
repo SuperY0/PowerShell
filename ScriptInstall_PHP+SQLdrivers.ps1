@@ -7,7 +7,7 @@
 #Crear Modulo en IIS a nivel server "Add module Mapping"
 #Request Path: *.php
 #Module: FastCgiModule
-#Executable: C:\PHP7.4.30\php-cgi.exe
+#Executable: C:\php\php-cgi.exe
 #Name: FastCGI
 ############################################
 
