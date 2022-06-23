@@ -2,7 +2,7 @@
 
 
 ############################################
-#Activar Roles and Features IIS + CGI
+# PARA IIS-Activar Roles and Features IIS + CGI
 ############################################
 #Crear Modulo en IIS a nivel server "Add module Mapping"
 #Request Path: *.php
