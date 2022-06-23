@@ -1,4 +1,4 @@
-#SCRIPT INSTALACION DESATENDIDA PHP7.4.30+DriversSQLSRV510_NTS_x64+COMPOSER+variables de entorno + NODEjs
+#SCRIPT INSTALACION DESATENDIDA PHP7.1 en adelante+DriversSQLSRV y PDO+ODBC18+COMPOSER+variables de entorno + NODEjs
 
 
 ############################################
