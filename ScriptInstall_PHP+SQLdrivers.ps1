@@ -20,7 +20,7 @@ $PHP_path = "C:\php\"
 $TEMP_path = "C:\Windows\Temp\"
 #$SQLDriver_url = "https://download.microsoft.com/download/F/1/B/F1B49733-E519-419B-A192-10DCE6E3C35B/SQLSRV561.EXE" #Usar para PHP7.1
 $SQLDriver_url = "https://download.microsoft.com/download/f/4/d/f4d95d48-74ae-4d72-a602-02145a5f29c8/SQLSRV510.ZIP"  #Usar para PHP7.4 en adelante
-$ODBCDriver_url= "https://download.microsoft.com/download/1/a/4/1a4a49b8-9fe6-4237-be0d-a6b8f2d559b5/en-US/18.0.1.1/x64/msodbcsql.msi"
+$ODBCDriver_url = "https://download.microsoft.com/download/1/a/4/1a4a49b8-9fe6-4237-be0d-a6b8f2d559b5/en-US/18.0.1.1/x64/msodbcsql.msi"
 $COMPOSER_url = "https://getcomposer.org/Composer-Setup.exe"
 $NODEJS_url = "https://nodejs.org/dist/v16.15.1/node-v16.15.1-x64.msi"
 $SQLDriver_version = "74" #Versiones "71", "74", "80", "81"
@@ -46,7 +46,7 @@ copy $Temp_path'sqldrivers'\'php_pdo_sqlsrv_'$SQLDriver_version'_nts_x64.dll' $P
 
 
 #---------Descarga e Instala ODBC Drivers
-curl -o $Temp_path'msodbcsql.msi' $ODBC_Driver_url
+curl -o $Temp_path'msodbcsql.msi' $ODBCDriver_url
 msiexec.exe /i $Temp_path'msodbcsql.msi' /passive IACCEPTMSODBCSQLLICENSETERMS=YES
 
 
