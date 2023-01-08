@@ -27,7 +27,7 @@ $SQLDriver_url = "https://download.microsoft.com/download/f/4/d/f4d95d48-74ae-4d
 $ODBCDriver_url = "https://download.microsoft.com/download/1/a/4/1a4a49b8-9fe6-4237-be0d-a6b8f2d559b5/en-US/18.0.1.1/x64/msodbcsql.msi"
 $COMPOSER_url = "https://getcomposer.org/Composer-Setup.exe"
 $NODEJS_url = "https://nodejs.org/dist/v16.15.1/node-v16.15.1-x64.msi"
-$SQLDriver_version = "74" #Versiones PHP7.1=71 - PHP7.4=74, PHP8.1=80, PHP8.1=81
+$SQLDriver_version = "74" #Versiones PHP7.1=71 - PHP7.4=74, PHP8.0=80, PHP8.1=81
 ##########################################################################################################################################################
 
 
