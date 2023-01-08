@@ -15,7 +15,11 @@
 #----DECLARACION DE VARIABLES, OPCION DE ESPECIFICAR urls de VERSIONES A DESCARGAR y directorio de instalacion
 #----Link ultima version PHP7.1 -> https://windows.php.net/downloads/releases/archives/php-7.1.9-nts-Win32-VC14-x64.zip
 #----Link Microsoft Driver SQL-> https://docs.microsoft.com/en-us/sql/connect/php/release-notes-php-sql-driver?view=sql-server-ver16#previous-releases
-$PHP_url = "https://windows.php.net/downloads/releases/php-8.0.20-nts-Win32-vs16-x64.zip"
+#----Link PHP 7.4.xx Latest, este link siempre baja la ultima version https://windows.php.net/downloads/releases/latest/php-7.4-nts-Win32-vc15-x64-latest.zip
+#----Link PHP 8.0.xx Latest, este link siempre baja la ultima version https://windows.php.net/downloads/releases/latest/php-8.0-nts-Win32-vs16-x64-latest.zip
+
+############################################VALORES A MODIFICAR DEPENDIENDO LA VERSION DE PHP A INSTALAR#################################################
+$PHP_url = "https://windows.php.net/downloads/releases/latest/php-7.4-nts-Win32-vc15-x64-latest.zip"
 $PHP_path = "C:\php\"
 $TEMP_path = "C:\Windows\Temp\"
 #$SQLDriver_url = "https://download.microsoft.com/download/F/1/B/F1B49733-E519-419B-A192-10DCE6E3C35B/SQLSRV561.EXE" #Usar para PHP7.1
@@ -23,7 +27,7 @@ $SQLDriver_url = "https://download.microsoft.com/download/f/4/d/f4d95d48-74ae-4d
 $ODBCDriver_url = "https://download.microsoft.com/download/1/a/4/1a4a49b8-9fe6-4237-be0d-a6b8f2d559b5/en-US/18.0.1.1/x64/msodbcsql.msi"
 $COMPOSER_url = "https://getcomposer.org/Composer-Setup.exe"
 $NODEJS_url = "https://nodejs.org/dist/v16.15.1/node-v16.15.1-x64.msi"
-$SQLDriver_version = "74" #Versiones "71", "74", "80", "81"
+$SQLDriver_version = "74" #Versiones PHP7.1=71 - PHP7.4=74, PHP8.1=80, PHP8.1=81
 ##########################################################################################################################################################
 
 
