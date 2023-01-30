@@ -7,7 +7,7 @@
 #Crear Modulo en IIS a nivel server "Add module Mapping"
 #Request Path: *.php
 #Module: FastCgiModule
-#Executable: C:\php\php-cgi.exe
+#Executable: C:\php74\php-cgi.exe
 #Name: FastCGI
 ############################################
 
@@ -18,17 +18,19 @@
 #----Link PHP 7.4.xx Latest, este link siempre baja la ultima version https://windows.php.net/downloads/releases/latest/php-7.4-nts-Win32-vc15-x64-latest.zip
 #----Link PHP 8.0.xx Latest, este link siempre baja la ultima version https://windows.php.net/downloads/releases/latest/php-8.0-nts-Win32-vs16-x64-latest.zip
 
-############################################VALORES A MODIFICAR DEPENDIENDO LA VERSION DE PHP A INSTALAR#################################################
+
+
+##########VALORES A MODIFICAR DEPENDIENDO LA VERSION DE PHP y NODEJS A INSTALAR##############
+$SQLDriver_version = "74" #Versiones PHP7.1=71 - PHP7.4=74, PHP8.0=80, PHP8.1=81
 $PHP_url = "https://windows.php.net/downloads/releases/latest/php-7.4-nts-Win32-vc15-x64-latest.zip"
-$PHP_path = "C:\php\"
+$PHP_path = "C:\php" + $SQLDriver_version + "\" #El path se genera dependiendo la version que se setee arriba(sirve para diferenciar si hay varias versiones en un mismo server)
 $TEMP_path = "C:\Windows\Temp\"
-#$SQLDriver_url = "https://download.microsoft.com/download/F/1/B/F1B49733-E519-419B-A192-10DCE6E3C35B/SQLSRV561.EXE" #Usar para PHP7.1
+#$SQLDriver_url = "https://download.microsoft.com/download/F/1/B/F1B49733-E519-419B-A192-10DCE6E3C35B/SQLSRV561.EXE" #Usar para PHP7.1 y comentar el de abajo
 $SQLDriver_url = "https://download.microsoft.com/download/f/4/d/f4d95d48-74ae-4d72-a602-02145a5f29c8/SQLSRV510.ZIP"  #Usar para PHP7.4 en adelante
 $ODBCDriver_url = "https://download.microsoft.com/download/1/a/4/1a4a49b8-9fe6-4237-be0d-a6b8f2d559b5/en-US/18.0.1.1/x64/msodbcsql.msi"
 $COMPOSER_url = "https://getcomposer.org/Composer-Setup.exe"
 $NODEJS_url = "https://nodejs.org/dist/v16.15.1/node-v16.15.1-x64.msi"
-$SQLDriver_version = "74" #Versiones PHP7.1=71 - PHP7.4=74, PHP8.0=80, PHP8.1=81
-##########################################################################################################################################################
+##############################################################################################
 
 
 #---------Descarga y Descomprime PHP
@@ -65,8 +67,7 @@ Add-Content -Path $PHP_path'php.ini' -Value extension='php_pdo_sqlsrv_'$SQLDrive
 
 
 #---------Habilita extensiones necesarias para COMPOSER
-#Add-Content -Path $PHP_path'php.ini' -Value 'extension_dir = "ext"' #hay que habilitar cuando no se usa la ruta default de extensiones C:\php\ext\
-#Add-Content -Path $PHP_path'php.ini' -Value 'allow_url_fopen = On' //ya viene habilitado en el php.ini-production
+Add-Content -Path $PHP_path'php.ini' -Value 'extension_dir = "ext"' #hay que habilitar cuando no se usa la ruta default de extensiones C:\php\ext\
 Add-Content -Path $PHP_path'php.ini' -Value extension=curl
 Add-Content -Path $PHP_path'php.ini' -Value extension=mbstring
 Add-Content -Path $PHP_path'php.ini' -Value extension=openssl
