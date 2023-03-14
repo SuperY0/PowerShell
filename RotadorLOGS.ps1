@@ -44,6 +44,8 @@ for ($j = 0; $j -lt $sourceDirs.Count; $j++) {
     }
 }
 
+
+#Busca en los directorios $destinationDirs los zip que tengan 30 dias de antiguos y los borra
 $maxAge = 30 #días
 foreach ($dir in $destinationDirs) {
     Get-ChildItem -Path $dir -Filter "*.zip" | Where-Object { $_.LastWriteTime -lt (Get-Date).AddDays(-$maxAge) } | Remove-Item -Force
