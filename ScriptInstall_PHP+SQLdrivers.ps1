@@ -66,11 +66,13 @@ Add-Content -Path $PHP_path'php.ini' -Value extension='php_sqlsrv_'$SQLDriver_ve
 Add-Content -Path $PHP_path'php.ini' -Value extension='php_pdo_sqlsrv_'$SQLDriver_version'_nts_x64.dll'
 
 
+
 #---------Habilita extensiones necesarias para COMPOSER
 Add-Content -Path $PHP_path'php.ini' -Value 'extension_dir = "ext"' #hay que habilitar cuando no se usa la ruta default de extensiones C:\php\ext\
 Add-Content -Path $PHP_path'php.ini' -Value extension=curl
 Add-Content -Path $PHP_path'php.ini' -Value extension=mbstring
 Add-Content -Path $PHP_path'php.ini' -Value extension=openssl
+Add-Content -Path $PHP_path'php.ini' -Value date.timezone = "America/Argentina/Buenos_Aires"
 
 
 #---------Descarga e Instala COMPOSER 
