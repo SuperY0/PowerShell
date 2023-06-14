@@ -72,7 +72,9 @@ Add-Content -Path $PHP_path'php.ini' -Value 'extension_dir = "ext"' #hay que hab
 Add-Content -Path $PHP_path'php.ini' -Value extension=curl
 Add-Content -Path $PHP_path'php.ini' -Value extension=mbstring
 Add-Content -Path $PHP_path'php.ini' -Value extension=openssl
-Add-Content -Path $PHP_path'php.ini' -Value date.timezone = "America/Argentina/Buenos_Aires"
+Add-Content -Path $PHP_path'php.ini' -Value 'date.timezone = "America/Argentina/Buenos_Aires"'
+Add-Content -Path $PHP_path'php.ini' -Value extension=fileinfo
+
 
 
 #---------Descarga e Instala COMPOSER 
