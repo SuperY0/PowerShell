@@ -7,8 +7,8 @@
 #Crear Modulo en IIS a nivel server "Add module Mapping"
 #Request Path: *.php
 #Module: FastCgiModule
-#Executable: C:\php74\php-cgi.exe
-#Name: FastCGI
+#Executable: D:\DependenciasApps\PHPXX\php-cgi.exe
+#Name: Proyecto-FastCGI ejemplo(App1-FastCGI)
 ############################################
 
 
@@ -23,7 +23,7 @@
 ##########VALORES A MODIFICAR DEPENDIENDO LA VERSION DE PHP y NODEJS A INSTALAR##############
 $SQLDriver_version = "74" #Versiones PHP7.1=71 - PHP7.4=74, PHP8.0=80, PHP8.1=81
 $PHP_url = "https://windows.php.net/downloads/releases/latest/php-7.4-nts-Win32-vc15-x64-latest.zip"
-$PHP_path = "C:\php" + $SQLDriver_version + "\" #El path se genera dependiendo la version que se setee arriba(sirve para diferenciar si hay varias versiones en un mismo server)
+$PHP_path = "D:\DependenciasApps\PHP" + $SQLDriver_version + "\" #El path se genera dependiendo la version que se setee arriba(sirve para diferenciar si hay varias versiones en un mismo server)
 $TEMP_path = "C:\Windows\Temp\"
 #$SQLDriver_url = "https://download.microsoft.com/download/F/1/B/F1B49733-E519-419B-A192-10DCE6E3C35B/SQLSRV561.EXE" #Usar para PHP7.1 y comentar el de abajo
 $SQLDriver_url = "https://download.microsoft.com/download/f/4/d/f4d95d48-74ae-4d72-a602-02145a5f29c8/SQLSRV510.ZIP"  #Usar para PHP7.4 en adelante
