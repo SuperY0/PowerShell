@@ -40,11 +40,12 @@ foreach ($directorio in $listaDirectorios) {
 
     # Caso 2: Busca archivos con nombres predefinidos
     $archivosPredefinidos = @("application.log", "application1.log", "application2.log", "application3.txt", "application4.txt")
-
+    
     foreach ($archivoPredefinido in $archivosPredefinidos) {
         $rutaArchivoPredefinido = Join-Path -Path $directorio -ChildPath $archivoPredefinido
         if (Test-Path $rutaArchivoPredefinido) {
-            $nombreArchivoZip = Join-Path -Path $rutaBackup -ChildPath ($archivoPredefinido + ".zip")
+            $fechaActual = Get-Date -Format 'yyyy-MM-dd'
+            $nombreArchivoZip = Join-Path -Path $rutaBackup -ChildPath ($archivoPredefinido + "_" + $fechaActual + ".zip")
             Compress-Archive -Path $rutaArchivoPredefinido -DestinationPath $nombreArchivoZip -Force
             Remove-Item -Path $rutaArchivoPredefinido -Force
         }
