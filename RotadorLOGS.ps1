@@ -41,6 +41,7 @@ foreach ($directorio in $listaDirectorios) {
     # Caso 2: Busca archivos con nombres predefinidos
     $archivosPredefinidos = @("application.log", "application1.log", "application2.log", "application3.txt", "application4.txt")
     $fechaAnterior2 = (Get-Date).AddDays(-1).ToString('yyyy-MM-dd')
+    
     foreach ($archivoPredefinido in $archivosPredefinidos) {
         $rutaArchivoPredefinido = Join-Path -Path $directorio -ChildPath $archivoPredefinido
         if (Test-Path $rutaArchivoPredefinido) {
