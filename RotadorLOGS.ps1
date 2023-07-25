@@ -44,8 +44,7 @@ foreach ($directorio in $listaDirectorios) {
     foreach ($archivoPredefinido in $archivosPredefinidos) {
         $rutaArchivoPredefinido = Join-Path -Path $directorio -ChildPath $archivoPredefinido
         if (Test-Path $rutaArchivoPredefinido) {
-            $fechaActual = Get-Date -Format 'yyyy-MM-dd'
-            $nombreArchivoZip = Join-Path -Path $rutaBackup -ChildPath ($archivoPredefinido + "_" + $fechaActual + ".zip")
+            $nombreArchivoZip = Join-Path -Path $rutaBackup -ChildPath ($archivoPredefinido + "_" + $fechaAnterior + ".zip")
             Compress-Archive -Path $rutaArchivoPredefinido -DestinationPath $nombreArchivoZip -Force
             Remove-Item -Path $rutaArchivoPredefinido -Force
         }
