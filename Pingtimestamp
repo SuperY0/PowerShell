@@ -1,1 +1,1 @@
-ping.exe -t sarbabavbhl02|Foreach{"{0} - {1}" -f (Get-Date),$_} >> C:\Users\usuariooooo\Desktop\tradu.txt
+ping.exe -t servernameorip | Foreach{"{0} - {1}" -f (Get-Date),$_} >> C:\Users\usuariooooo\Desktop\tradu.txt
